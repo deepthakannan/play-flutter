@@ -14,3 +14,46 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+## Widgets
+
+MaterialApp
+    -debugShowBanner
+    -initialRoute
+Scaffold - ?
+ListView
+EdgeIntersects - to control padding/borders
+SizedBox - for text fields
+TextField - for username, password, etc
+SafeArea - ?
+AsymmetricView - ?
+RaisedButton- ?
+Backdrop?
+Container
+Stack
+Column
+    CrossAxisAlignment
+    MainAxisAlignment
+Row
+AspectRatio
+Center
+
+## Non-Widgets
+ThemeData
+InputDecoration - decorate textFields, etc
+Theme.of(context).copyWith(overrides...) - apply theme with overides?
+BeveledRectangularBox - shape type
+OutlineInputBorder?
+CornerCutBorder
+Navigator
+AnimationController
+Animation
+RelativeRectTween
+PositionedTransition
+Column - 
+
+
+
+
+
+
