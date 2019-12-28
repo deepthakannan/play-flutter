@@ -15,6 +15,12 @@ A few resources to get you started if this is your first Flutter project:
 
 [Widget of the week](https://www.youtube.com/watch?v=lkF0TQJO0bA&list=PLOU2XLYxmsIL0pH0zWe_ZOHgGhZ7UasUE)
 
+
+### Stateless widget
+    - Stateless widgets are immutable, meaning that their properties can’t change—all values are final.
+### Stateful widget
+    - Stateful widgets maintain state that might change during the lifetime of the widget. Implementing a stateful widget requires at least two classes: 1) a StatefulWidget class that creates an instance of 2) a State class. The StatefulWidget class is, itself, immutable, but the State class persists over the lifetime of the widget.
+
 ## Widgets 
 - MaterialApp
     - debugShowBanner

@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:english_words/english_words.dart';
+import './random_words.dart';
 
 void main() {
   FlutterError.onError = (FlutterErrorDetails details) {
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Welcome to Flutter'),
         ),
-        body: Center(child: Text(word.asCamelCase),),
+        body: Center(child: RandomWords(),),
 
         ),
     );
