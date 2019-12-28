@@ -1,7 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
-import 'package:english_words/english_words.dart';
 import './random_words.dart';
 
 void main() {
@@ -16,10 +15,13 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var word = WordPair.random();
     return MaterialApp(
       title: 'Startup Name Generator',
       home: RandomWords(),
+      theme: ThemeData(
+        primaryColor: Colors.orangeAccent,
+        backgroundColor: Colors.deepOrangeAccent
+      ),
     );
   }
 }

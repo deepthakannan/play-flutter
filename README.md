@@ -2,18 +2,13 @@
 
 A new Flutter project.
 
-## Getting Started
+## Helpful resources
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-[Online documentation](https://flutter.dev/docs)
+- [Online documentation](https://flutter.dev/docs)
 
-[Widget of the week](https://www.youtube.com/watch?v=lkF0TQJO0bA&list=PLOU2XLYxmsIL0pH0zWe_ZOHgGhZ7UasUE)
+- [Widget of the week](https://www.youtube.com/watch?v=lkF0TQJO0bA&list=PLOU2XLYxmsIL0pH0zWe_ZOHgGhZ7UasUE)
 
 
 ### Stateless widget
@@ -25,6 +20,8 @@ A few resources to get you started if this is your first Flutter project:
 - MaterialApp
     - debugShowBanner
     - initialRoute
+    - theme
+    - routes
 - Scaffold - provides a default app bar, title, and a body property that holds the widget tree for the home screen. The widget subtree can be quite complex.
 - ListView
 - EdgeIntersects - to control padding/borders
@@ -43,10 +40,13 @@ A few resources to get you started if this is your first Flutter project:
 - AspectRatio
 - Center
 - Icon
+- IconButton
 - InkWell
 - Expanded
 - Divider
 - ListTile - Title, Subtitle
+- FutureBuilder
+- CircularProgressIndicator
 
 ## Utilities
 - ThemeData
@@ -55,7 +55,7 @@ A few resources to get you started if this is your first Flutter project:
 - BeveledRectangularBox - shape type
 - OutlineInputBorder?
 - CornerCutBorder
-- Navigator
+- Navigator - push, pop, pushNamed. Navigator adds a "Back" button to the app bar. You don't have to explicitly implement Navigator.pop.
 - AnimationController
 - Animation
 - RelativeRectTween
@@ -66,6 +66,10 @@ A few resources to get you started if this is your first Flutter project:
 - package:provider
 - provider.of<MyChangeNotifier>()
 - ChangeNotifierProvider
+- compute - for compute intensive tasks
+- http package
+- https://flutter.dev/docs/cookbook/networking/fetch-data#4-fetch-the-data
+- initState() vs didChangeDependencies()
 
 
 
