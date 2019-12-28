@@ -1,4 +1,4 @@
-# play_flutter
+# Play with Flutter
 
 A new Flutter project.
 
@@ -11,48 +11,53 @@ A few resources to get you started if this is your first Flutter project:
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+[Online documentation](https://flutter.dev/docs)
 
-## Widgets
+[Widget of the week](https://www.youtube.com/watch?v=lkF0TQJO0bA&list=PLOU2XLYxmsIL0pH0zWe_ZOHgGhZ7UasUE)
 
-MaterialApp
-    -debugShowBanner
-    -initialRoute
-Scaffold - ?
-ListView
-EdgeIntersects - to control padding/borders
-SizedBox - for text fields
-TextField - for username, password, etc
-SafeArea - ?
-AsymmetricView - ?
-RaisedButton- ?
-Backdrop?
-Container
-Stack
-Column
-    CrossAxisAlignment
-    MainAxisAlignment
-Row
-AspectRatio
-Center
+## Widgets 
+- MaterialApp
+    - debugShowBanner
+    - initialRoute
+- Scaffold - provides a default app bar, title, and a body property that holds the widget tree for the home screen. The widget subtree can be quite complex.
+- ListView
+- EdgeIntersects - to control padding/borders
+- SizedBox - for text fields
+- TextField - for username, password, etc
+- SafeArea - ?
+- AsymmetricView - ?
+- RaisedButton- ?
+- Backdrop?
+- Container
+- Stack
+- Column
+    - CrossAxisAlignment
+    - MainAxisAlignment
+- Row
+- AspectRatio
+- Center
+- Icon
+- InkWell
+- Expanded
 
-## Non-Widgets
-ThemeData
-InputDecoration - decorate textFields, etc
-Theme.of(context).copyWith(overrides...) - apply theme with overides?
-BeveledRectangularBox - shape type
-OutlineInputBorder?
-CornerCutBorder
-Navigator
-AnimationController
-Animation
-RelativeRectTween
-PositionedTransition
-Column - 
-
-
+## Utilities
+- ThemeData
+- InputDecoration - decorate textFields, etc
+- Theme.of(context).copyWith(overrides...) - apply theme with overides?
+- BeveledRectangularBox - shape type
+- OutlineInputBorder?
+- CornerCutBorder
+- Navigator
+- AnimationController
+- Animation
+- RelativeRectTween
+- PositionedTransition
+- ClipRect 
+- ScopedModel
+- BLoC
+- package:provider
+- provider.of<MyChangeNotifier>()
+- ChangeNotifierProvider
 
 
 
