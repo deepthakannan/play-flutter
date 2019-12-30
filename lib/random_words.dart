@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:english_words/english_words.dart';
+import './scenic.dart';
 
 class RandomWordsState extends State<RandomWords> {
   final _suggestions = <WordPair>[];
@@ -38,7 +39,12 @@ class RandomWordsState extends State<RandomWords> {
     appBar: AppBar(
       title: Text('Startup Name Generator'),
       actions: <Widget>[
-        IconButton(icon: Icon(Icons.list), onPressed: _pushSaved)
+        IconButton(icon: Icon(Icons.list), onPressed: _pushSaved),
+        IconButton(icon: Icon(Icons.nature), onPressed: () => Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => ScenicWidget()
+          )
+        ))
       ],
     ),
     body: _buildSuggestions(),
