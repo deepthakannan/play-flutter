@@ -13,8 +13,12 @@ class ScenicWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Expanded(
-                  child: Image.network(
-                      'https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/6/2017/11/04133712/waterfall.jpg'))
+                  child: Image.asset(
+                    'images/waterfall.jpg',
+                  width: 600,            
+                  height: 240,            
+                  fit: BoxFit.cover,)
+              )
             ],
           ),
           Container(
