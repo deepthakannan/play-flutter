@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:english_words/english_words.dart';
+import './favorite_widge.dart';
 
 class ScenicWidget extends StatelessWidget {
   @override
@@ -46,11 +47,7 @@ class ScenicWidget extends StatelessWidget {
                       )
                     ],
                   )),
-                  Column(children: <Widget>[Icon(
-                    Icons.star,
-                    color: Colors.red,
-                  )]),
-                  Column(children: <Widget>[Text('41')])
+                  FavoriteWidget()
                 ],
               )),
           Container(

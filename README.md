@@ -15,9 +15,9 @@ A new Flutter project.
 
 
 ### Stateless widget
-- Stateless widgets are immutable, meaning that their properties can’t change—all values are final.
+- Stateless widgets are immutable, meaning that their properties can’t change—all values are final. A stateless widget never changes. Icon, IconButton, and Text are examples of stateless widgets
 ### Stateful widget
-- Stateful widgets maintain state that might change during the lifetime of the widget. Implementing a stateful widget requires at least two classes: 1) a StatefulWidget class that creates an instance of 2) a State class. The StatefulWidget class is, itself, immutable, but the State class persists over the lifetime of the widget.
+- Stateful widgets maintain state that might change during the lifetime of the widget. If a widget can change—when a user interacts with it, for example—it’s stateful. Implementing a stateful widget requires at least two classes: 1) a StatefulWidget class that creates an instance of 2) a State class. The StatefulWidget class is, itself, immutable, but the State class persists over the lifetime of the widget.
 
 ## Widgets
 - MaterialApp
