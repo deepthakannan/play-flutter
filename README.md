@@ -90,8 +90,12 @@ A new Flutter project.
 - initState() vs didChangeDependencies()
 - BorderRadius.circular
 - MediaQuery.of() method in your build functions gives you the size, orientation, etc, of your current app.
+- AssetBundle object - loadString() or load()
+- AssetImage
 
 ## Tips and Documentation gems
+- Flutter is declarative. This means that Flutter builds its user interface to reflect the current state of your app: There is no imperative changing of the UI itself (like widget.setText) — you change the state, and the UI rebuilds from scratch.
+- widgets are immutable. They don’t change—they get replaced.
 - uses-material-design: true entry in the flutter section of your pubspec.yaml
 - Navigator adds a "Back" button to the app bar. You don't have to explicitly implement Navigator.pop.
 - Widgets (Stateful and Stateless) are temporary objects, used to construct a presentation of the application in its current state. State objects, on the other hand, are persistent - between calls to build(), allowing them to remember information.
@@ -110,6 +114,19 @@ A new Flutter project.
 - DefaultTextStyle.merge() - DefaultTextStyle.merge() allows you to create a default text style that is inherited by its child and all subsequent children.
 - When the constraints change (for example, the user rotates the phone, or puts your app into a tile UI in Nougat), the build function runs.
 - In Flutter, widgets are rendered by their underlying RenderBox objects. Render boxes are given constraints by their parent, and size themselves within those constraints. Constraints consist of minimum and maximum widths and heights; sizes consist of a specific width and height - https://flutter.dev/docs/development/ui/layout/box-constraints
+- Here are the most common ways to manage state:
+    - The widget manages its own state (ListView automatically scrolls when its content exceeds the render box. Most developers using ListView don’t want to manage ListView’s scrolling behavior, so ListView itself manages its scroll offset.)
+    - The parent manages the widget’s state (If in doubt, start by managing state in the parent widget. Here child widget is stateless but parentwidget is stateful)
+    - A mix-and-match approach - the stateful widget (checkbox for example) manages some of the state, and the parent widget manages other aspects of the state (based on callback from checkbox widget).
+- [Gestures](https://flutter.dev/docs/development/ui/interactive#resources)
+- [Assets](https://flutter.dev/docs/development/ui/assets-and-images) - An asset is a file that is bundled and deployed with your app, and is accessible at runtime. Common types of assets include static data (for example, JSON files), configuration files, icons, and images
+- This launch screen persists until Flutter renders the first frame of your application - This implies that if you don’t call [runApp()][] in the main() function of your app (or more specifically, if you don’t call window.render() in response to window.onDrawFrame), the launch screen persists forever.
+- Types of states in flutter
+    - ephemeral state - state of the current page. State you can neatly contain in a single widget. Other parts of the widget tree seldom need to access this kind of state. In other words, there is no need to use state management techniques (ScopedModel, Redux, etc.) on this kind of state. All you need is a StatefulWidget.
+    - app state - State that is not ephemeral, that you want to share across many parts of your app, and that you want to keep between user sessions. Examples of application state:
+        - User preferences
+        - Login info
+        - The shopping cart in an e-commerce app
 
 
 
