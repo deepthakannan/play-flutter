@@ -89,6 +89,7 @@ A new Flutter project.
 - https://flutter.dev/docs/cookbook/networking/fetch-data#4-fetch-the-data
 - initState() vs didChangeDependencies()
 - BorderRadius.circular
+- MediaQuery.of() method in your build functions gives you the size, orientation, etc, of your current app.
 
 ## Tips and Documentation gems
 - uses-material-design: true entry in the flutter section of your pubspec.yaml
@@ -107,6 +108,8 @@ A new Flutter project.
 - All layout widgets have either of the following: A **child** property or a **children** property
 - a row or column occupies as much space along its main axis as possible, but if you want to pack the children closely together, set its mainAxisSize to **MainAxisSize.min**
 - DefaultTextStyle.merge() - DefaultTextStyle.merge() allows you to create a default text style that is inherited by its child and all subsequent children.
+- When the constraints change (for example, the user rotates the phone, or puts your app into a tile UI in Nougat), the build function runs.
+- In Flutter, widgets are rendered by their underlying RenderBox objects. Render boxes are given constraints by their parent, and size themselves within those constraints. Constraints consist of minimum and maximum widths and heights; sizes consist of a specific width and height - https://flutter.dev/docs/development/ui/layout/box-constraints
 
 
 
