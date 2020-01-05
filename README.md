@@ -82,7 +82,10 @@ A new Flutter project.
 - ScopedModel
 - BLoC
 - package:provider
-- provider.of<MyChangeNotifier>()
+    - ChangeNotifier - if something is a ChangeNotifier, you can subscribe to its changes. (It is a form of Observable, for those familiar with the term.)
+    - ChangeNotifierProvider - is the widget that provides an instance of a ChangeNotifier to its descendants. It comes from the provider package. Enclose the parent widget inside a ChangeNotifierProvider whose children need access to a certain model (singleton service?)
+    - Consumer - is the widget that enacpsulates a widget who wants to consume the model. Consumer's builder is called with model instance when it is changed. This widget will be redrawn everytime model notifies that it changed. So don't enclose a top level widget unless it depends on the model data for its view.
+- provider.of<MyChangeNotifier>(context, listen: false) - if the model needs to be accessed not for its data - maybe to call a method on it (clearSession, clearCart, etc), use this so that the widget doesn't have to be rebuilt.
 - ChangeNotifierProvider
 - compute - for compute intensive tasks
 - http package
@@ -92,6 +95,12 @@ A new Flutter project.
 - MediaQuery.of() method in your build functions gives you the size, orientation, etc, of your current app.
 - AssetBundle object - loadString() or load()
 - AssetImage
+- [dart:convert](https://flutter.dev/docs/development/data-and-backend/json#serializing-json-inside-model-classes) - to serialize and deserialize. 
+    - It works with string and dynamic (no type safety) objects. For type safety,
+        - [For simple models](https://flutter.dev/docs/development/data-and-backend/json#serializing-json-inside-model-classes), implement custom 
+            - serialization using jsonEncode() - jsonEncode calls toJson() on the object passed in. In toJson() implementation return string and dynamic json equivalent.
+            - deserialization using jsonDecode() - jsonDecode return string and dynamic. Ask model to parse and construct concrete objects
+        - For complicated models and in medium to large scale projects, use code generators such as [json_serializable](https://flutter.dev/docs/development/data-and-backend/json#serializing-json-using-code-generation-libraries). 
 
 ## Tips and Documentation gems
 - Flutter is declarative. This means that Flutter builds its user interface to reflect the current state of your app: There is no imperative changing of the UI itself (like widget.setText) — you change the state, and the UI rebuilds from scratch.
@@ -127,7 +136,8 @@ A new Flutter project.
         - User preferences
         - Login info
         - The shopping cart in an e-commerce app
-
+- [State Management options](https://flutter.dev/docs/development/data-and-backend/state-mgmt/options)
+- 
 
 
 
